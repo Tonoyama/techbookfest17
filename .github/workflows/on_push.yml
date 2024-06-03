@@ -10,12 +10,14 @@ jobs:
     # https://github.com/actions/checkout
     - name: checkout source
       uses: actions/checkout@v3
-    # Build Artifacts
-    - name: Build distribution file
-      uses: TechBooster/ReVIEW-build-artifact-action@master
-    # Upload Distribution file
-    - name: Upload distribution file to github artifacts
-      uses: actions/upload-artifact@v3
       with:
-        name: Output documents
-        path: ./articles/*.pdf
+        repository: techbookfest-LettuceYogurt/techbookfest17
+        token: ${{ secrets.PAT }}
+    - uses: docker://vvakame/review:5.8
+      with:
+        entrypoint: bash
+        args: -c "cd articles; rake pdf"
+    - uses: actions/upload-artifact@v3
+      with:
+        name: build book
+        path: articles/ReVIEW-Template.pdf
