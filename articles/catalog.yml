@@ -2,7 +2,13 @@ PREDEF:
   - preface.re
 
 CHAPS:
-  - article.re
+  - hajimeni.re
+  - environment.re
+  - basic.re
+  - namespace.re
+  - cgroups.re
+  - filesystem.re
+  - security.re
 
 APPENDIX:
 

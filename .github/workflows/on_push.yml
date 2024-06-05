@@ -11,7 +11,7 @@ jobs:
     - name: checkout source
       uses: actions/checkout@v3
       with:
-        repository: techbookfest-LettuceYogurt/techbookfest17
+        repository: Tonoyama/techbookfest17
         token: ${{ secrets.PAT }}
     - uses: docker://vvakame/review:5.8
       with:
