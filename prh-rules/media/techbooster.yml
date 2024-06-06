@@ -329,6 +329,10 @@ rules:
   - expected: ユーザー
     pattern:  /ユーザ(?!ー)/ # 末尾に長音記号がつかない「ユーザ」だけ拾う
     prh: ユーザーでもユーザでもいいんだけどユーザーで統一してる
+  - expected: macOS
+    pattern:  Mac OS
+    prh: Appleのオペレーティングシステムの名称はmacOSで統一します
+
 
   - expected: Wi-Fi
     pattern:  WiFi
